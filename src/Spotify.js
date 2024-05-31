@@ -1,12 +1,9 @@
-require("dotenv").config();
-console.log(process.env.CLIENT_ID);
-
 let accessToken;
 
 const Spotify = {
   getToken() {
-    const clientId = process.env.CLIENT_ID;
-    const redirectUri = process.env.REDIRECT_URI;
+    const clientId = process.env.REACT_APP_CLIENT_ID;
+    const redirectUri = process.env.REACT_APP_REDIRECT_URI;
 
     if (accessToken) {
       return accessToken;
